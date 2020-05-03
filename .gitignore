@@ -4,5 +4,4 @@
 /runtime
 *.log
 .env
-composer.json
 composer.lock
