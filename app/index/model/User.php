@@ -14,36 +14,23 @@ class User extends Model
 {
 
     protected $schema = [
-        'id'          => 'int',
-        'username'    => 'varchar',
-        'password'    => 'varchar',
-        'create_time' => 'int',
-        'update_time' => 'int',
-        'age'         => 'int',
-        'sex'         => 'varchar',
-
+        'id'       => 'int',
+        'username' => 'varchar',
+        'password' => 'varchar',
+        'age'      => 'int',
+        'sex'      => 'int',
+        'mobile'   => 'int',
     ];
 
     protected $field = [
         'id',
         'username',
         'password',
-        'create_time',
+        'mobile',
         'age',
         'sex',
     ];
 
-    protected $type = [
-        'create_time' => 'int',
-        'update_time' => 'int',
-    ];
-
-    public function login()
-    {
-
-    }
-
-    protected $autoWriteTimestamp = true;
 
     public static function onAfterRead($model)
     {

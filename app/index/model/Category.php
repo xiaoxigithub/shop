@@ -12,25 +12,16 @@ use think\Model;
 
 class Category extends Model
 {
-
     protected $schema = [
-        'id'          => 'int',
-        'username'    => 'varchar',
-        'password'    => 'varchar',
-        'create_time' => 'int',
-        'update_time' => 'int',
-        'age'         => 'int',
-        'sex'         => 'varchar',
-
+        'id'   => 'int',
+        'name' => 'varchar',
+        'pid'  => 'int',
     ];
 
     protected $field = [
         'id',
-        'username',
-        'password',
-        'create_time',
-        'age',
-        'sex',
+        'name',
+        'pid',
     ];
 
     protected $type = [
@@ -38,7 +29,6 @@ class Category extends Model
         'update_time' => 'int',
     ];
 
-    protected $autoWriteTimestamp = true;
 
     public static function onAfterRead($model)
     {

@@ -10,27 +10,33 @@ namespace app\index\model;
 
 use think\Model;
 
-class Good extends Model
+class Goods extends Model
 {
-
     protected $schema = [
         'id'          => 'int',
-        'username'    => 'varchar',
-        'password'    => 'varchar',
+        'cate_id'     => 'int',
+        'name'        => 'varchar',
+        'price'       => 'int',
+        'thumb'       => 'varchar',
+        'status'      => 'int',
+        'desc'        => 'varchar',
+        'recycle'     => 'int',
         'create_time' => 'int',
         'update_time' => 'int',
-        'age'         => 'int',
-        'sex'         => 'varchar',
 
     ];
 
     protected $field = [
         'id',
-        'username',
-        'password',
+        'cate_id',
+        'name',
+        'price',
+        'thumb',
+        'status',
+        'desc',
         'create_time',
-        'age',
-        'sex',
+        'update_time',
+        'recycle',
     ];
 
     protected $type = [
