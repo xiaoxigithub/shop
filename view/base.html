@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{block name="title"}标题{/block}</title>
+    <link href="__STATIC__/css/bootstrap.min.css" rel="stylesheet">
+    <script src="__STATIC__/js/jquery-3.2.1.min.js"></script>
+    <script src="__STATIC__/js/bootstrap.js"></script>
+</head>
+<body>
+{block name="menu"}
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" title="logoTitle" href="#">logo</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+                <li role="presentation">
+                    <a href="#">当前用户：<span class="badge">xiaoxi</span></a>
+                </li>
+                <li>
+                    <a href="/login/logout">
+                        <span class="glyphicon glyphicon-lock"></span>退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{/block}
+{block name="left"}{/block}
+{block name="main"}主内容{/block}
+{block name="right"}{/block}
+{block name="footer"}
+<div class="footer">
+    <p class="text-center">
+        2018 &copy; 小熙.
+    </p>
+</div>
+{/block}
+</body>
+</html>
