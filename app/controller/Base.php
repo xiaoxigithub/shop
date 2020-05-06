@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 declare (strict_types=1);
 
-namespace app\index\controller;
+namespace app\controller;
 
 use think\App;
 use think\exception\ValidateException;
@@ -69,6 +69,10 @@ abstract class Base
     // 初始化
     protected function initialize()
     {
+        $this->template->assign([
+            'title'   => 'shop世界顶级图书馆',
+            'keyword' => '这里是最实惠的书城'
+        ]);
     }
 
     /**

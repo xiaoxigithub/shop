@@ -3,17 +3,17 @@
  * Created by PhpStorm.
  * User: xiaoxi
  * Date: 2020/5/3
- * Time: 16:12
+ * Time: 16:11
  */
 
-namespace app\index\logic;
+namespace app\common\logic;
 
 /**
- * 分类表逻辑
- * Class CategoryLogic
+ * 商品表逻辑
+ * Class GoodsLogic
  * @package app\index\logic
  */
-class CategoryLogic
+class GoodsLogic
 {
 
 }

@@ -6,7 +6,7 @@
  * Time: 11:15
  */
 
-namespace app\index\model;
+namespace app\common\model;
 
 use think\Model;
 
@@ -29,10 +29,24 @@ class Category extends Model
         'update_time' => 'int',
     ];
 
+    protected $append = ['url'];
 
+    /**
+     * 自动获取书籍url
+     * @param $value
+     * @param $data
+     * @return string
+     */
+    protected function getUrlAttr($value, $data)
+    {
+        if (isset($data['id'])) {
+            return '/list?id=' . $data['id'];
+        }
+        return '';
+    }
     public static function onAfterRead($model)
     {
-        echo "查询后事件" . "<br>";
+//        echo "查询后事件" . "<br>";
     }
 
     public static function onBeforeInsert($model)

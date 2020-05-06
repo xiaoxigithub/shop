@@ -1,8 +1,8 @@
 <?php
 
-namespace app\index\controller;
+namespace app\controller;
 
-class Admin extends Base
+class User extends Base
 {
     public function login()
     {
