@@ -44,7 +44,9 @@ abstract class Base
      * 控制器中间件
      * @var array
      */
-    protected $middleware = [];
+    protected $middleware = [
+
+    ];
 
     protected $template;
 
@@ -64,6 +66,11 @@ abstract class Base
         $this->cookie = cookie('PHPSESSID');
         // 控制器初始化
         $this->initialize();
+        $action = $this->request->action();
+        if (!session('user') && strtolower($action) != 'login') {
+            // 去登录
+            return redirect('/user/login');
+        }
     }
 
     // 初始化

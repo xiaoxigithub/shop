@@ -22,6 +22,7 @@ Route::get('/list', 'index/list');
 // 详情页
 Route::get('/view', 'index/view')->pattern(['id' => '\d']);
 // 登录
-Route::get('/login', 'User/Login');
+Route::rule('/login', 'User/Login');
 // 注销
 Route::get('/logout', 'User/LogOut');
+Route::get('/verify', 'User/verify');

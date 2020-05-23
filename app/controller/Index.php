@@ -33,7 +33,7 @@ class Index extends Base
      */
     public function cateList(Request $request)
     {
-        $limit = $request->param('limit', 1);
+        $limit = $request->param('limit', 10);
         $page = $request->param('page', 1);
         $cateList = Category::paginate([
             'list_rows' => $limit,
@@ -54,7 +54,7 @@ class Index extends Base
      */
     public function list(Request $request)
     {
-        $limit = $request->param('limit', 5);
+        $limit = $request->param('limit', 10);
         $page = $request->param('page', 1);
         $id = $request->param('id');
         $good = Goods::find($id);
